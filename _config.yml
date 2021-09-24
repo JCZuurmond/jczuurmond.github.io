@@ -1,56 +1,56 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-#
-# If you need help with YAML syntax, here are some quick references for you:
-# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
-# https://learnxinyminutes.com/docs/yaml/
-#
 # Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
+title: Cor Zuurmond
+description: Demystifying data
+header_img: /assets/img/home.jpeg
+baseurl:
+owner: Cor
+published_at: 2021
 
-title: Cor
-email: jczuurmond@protonmail.com
-description: >- # this means to ignore newlines until "baseurl:"
-  The blog of Cor Zuurmond.
-domain: jczuurmond.github.io
-url: "https://jczuurmond.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-baseurl: "" # the subpath of your site, e.g. /blog
-github_username:  JCZuurmond
-markdown: GFM
+# Sidebar settings
+sidebar: true
+sidebar_avatar: /assets/img/avatar.jpeg
+sidebar_about_description: Data Demystifier @ GoDataDriven
+
+# SNS settings
+RSS:                true
+email:              jczuurmond@protonmail.com
+github_username:    JCZuurmond
+#zhihu_username:     na
+#weibo_username:     na
+linkedin_username:  cor-zuurmond
+#twitter_username:   na
+#facebook_username:  na
+
+# Uncomment the line below if you use this theme as a GitHub Page's remote theme.
+remote_theme: lynn9388/huxpro
+
+# Google Analytics settings (https://analytics.google.com/)
+#ga_measurement_id: UA-138531028-1
+
+# Comments settings (https://utteranc.es/)
+# You must use your own repository, otherwise it won't work.
+comments_repository: jczuurmond/comments
 
 # Build settings
-theme: minima
-remote_theme: https://github.com/rosario/kasper
+paginate: 10
+timezone: Europe/Amsterdam
+kramdown:
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true
+collections:
+  pages:
+    output: true
+    permalink: /:path/
+defaults:
+  - scope:
+      path: _posts
+    values:
+      layout: post
 plugins:
   - jekyll-feed
-  - jekyll-remote-theme
-
-# Exclude from processing.
-# The following items will not be processed, by default.
-# Any item listed under the `exclude:` key here will be automatically added to
-# the internal "default list".
-#
-# Excluded items can be processed by explicitly listing the directories or
-# their entries' file path in the `include:` list.
-#
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+  - jekyll-paginate
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jemoji
+  - rouge
