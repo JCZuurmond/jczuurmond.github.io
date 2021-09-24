@@ -17,3 +17,6 @@ Gemfile.lock
 .DS_Store
 *.swp
 *~
+
+# Yaspeller
+yaspeller_report.html
