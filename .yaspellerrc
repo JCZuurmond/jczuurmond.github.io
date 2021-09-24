@@ -13,10 +13,13 @@
   ],
   "report": ["console", "html"],
   "dictionary": [
+    "GoDataDriven",
     "Jekyll",
     "Github",
     "Huxpro",
-    "DIY"
+    "DIY",
+    "PyData",
+    "Meetup(s)"
   ],
   "ignoreText": [
     "header_img: /assets/img/*",
