@@ -26,6 +26,7 @@ domain: jczuurmond.github.io
 url: "https://jczuurmond.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
 github_username:  JCZuurmond
+markdown: GFM
 
 # Build settings
 theme: minima
