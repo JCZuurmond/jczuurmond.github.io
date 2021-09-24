@@ -19,7 +19,8 @@
     "Huxpro",
     "DIY",
     "PyData",
-    "Meetup(s)"
+    "Meetup(s)",
+    "SkyGeo"
   ],
   "ignoreText": [
     "header_img: /assets/img/*",
