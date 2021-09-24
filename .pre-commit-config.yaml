@@ -64,3 +64,7 @@ repos:
   rev: 1.0.5
   hooks:
   - id: shell-lint
+- repo: https://github.com/hcodes/yaspeller.git
+  rev: v7.0.0
+  hooks:
+  - id: yaspeller

@@ -1,9 +1,9 @@
 ---
-title: Block acknowledgments
+title: Blog acknowledgments
 tags: [Jekyll]
 ---
 
-This blog is created with [Gihub pages](https://pages.github.com/) and
+This blog is created with [Github pages](https://pages.github.com/) and
 [Jekyll](https://jekyllrb.com/).
 
 # DIY
