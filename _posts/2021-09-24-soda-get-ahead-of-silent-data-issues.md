@@ -52,9 +52,9 @@ tool which makes the data tests visible. This makes it easier to:
 
 There are
 [various](https://docs.getdbt.com/docs/building-a-dbt-project/tests/){:target="_blank"}
-[tools](https://greatexpectations.io/){:target="_blank"}
-[that](https://github.com/awslabs/deequ){:target="_blank"}
-help you with this, but I want to introduce you to one in specific:
+[open source](https://greatexpectations.io/){:target="_blank"}
+[tools](https://github.com/awslabs/deequ){:target="_blank"}
+that help you with this, but I want to introduce you to one in specific:
 [soda-sql](https://github.com/sodadata/soda-sql).
 
 # Get ahead of silent data issues
