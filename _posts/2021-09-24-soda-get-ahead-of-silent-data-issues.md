@@ -6,15 +6,14 @@ tags: [data quality, Soda]
 It is a topic you can not avoid when working with data: **data quality**. It
 is due to
 [the law of bad data](https://towardsdatascience.com/data-quality-youre-measuring-it-wrong-8863e5ae6491){:target="_blank"}
-\- there is always more of it. Bad data is everywhere. That is why you have to
-deal with it.
+\- there is always more of it. You have to deal with bad data.
 
-[Andrew Ng](https://www.andrewng.org/){:target="_blank"} (co-founder of
-Coursera, Google Brain, deeplearning.ai, landing.ai) recently started a
+Like [Andrew Ng](https://www.andrewng.org/){:target="_blank"} (co-founder of
+Coursera, Google Brain, deeplearning.ai, landing.ai) who recently started a
 [data-centric AI competition](https://https-deeplearning-ai.github.io/data-centric-comp/){:target="_blank"}.
-You want to improve the performance on your machine learning model? Focus on
-engineering your data set because _"high-performance model architectures are
-widely available"_.
+The motivation for this competition: if you want to improve the performance of
+your machine learning model, then focus on engineering your data set because
+_"high-performance model architectures are widely available"_.
 
 At [GoDataDriven](https://godatadriven.com/){:target="_blank"} we partnered with
 [Soda](https://soda.io){:target="_blank"} to add a data quality tool to our
@@ -52,7 +51,7 @@ tool which makes the data tests visible. This makes it easier to:
 
 There are
 [various](https://docs.getdbt.com/docs/building-a-dbt-project/tests/){:target="_blank"}
-[open source](https://greatexpectations.io/){:target="_blank"}
+[data quality](https://greatexpectations.io/){:target="_blank"}
 [tools](https://github.com/awslabs/deequ){:target="_blank"}
 that help you with this, but I want to introduce you to one in specific:
 [soda-sql](https://github.com/sodadata/soda-sql).
@@ -71,13 +70,13 @@ of rows that are processed:
 assert 0 < df.count() <= 1_000_000_000
 ```
 
-Ok, this is at least a rudimentary test. But... **what if the row count of your
+Ok, this is a rudimentary test, but... **what if the row count of your
 daily processing batch suddenly drops with 90% while it was mostly stable
-before**???
+before???**
 
 I would like to receive a warning about this!!!
 
-These kind of issues are what we call _silent_ data issues. These issues are not
+These kind of issues are _silent_ data issues. These issues are not
 seen by looking at one batch of data at a specific point in time. It is
 something that is detected when looking at multiple data batches over time.
 
