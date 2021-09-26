@@ -4,7 +4,8 @@
     "LICENSE",
     "README.md",
     "Gemfile",
-    "_config.yml"
+    "_config.yml",
+    ".github/workflows/*"
   ],
   "lang": "en",
   "fileExtensions": [
