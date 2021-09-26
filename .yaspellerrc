@@ -4,7 +4,8 @@
     "LICENSE",
     "README.md",
     "Gemfile",
-    "_config.yml"
+    "_config.yml",
+    ".github/workflows/*"
   ],
   "lang": "en",
   "fileExtensions": [
@@ -17,10 +18,13 @@
     "Jekyll",
     "Github",
     "Huxpro",
-    "DIY",
     "PyData",
     "Meetup(s)",
-    "SkyGeo"
+    "SkyGeo",
+    "Ng",
+    "Coursera",
+    "deeplearning",
+    "ai"
   ],
   "ignoreText": [
     "header_img: /assets/img/*",
@@ -29,7 +33,7 @@
   ],
   "ignoreTags": ["code", "script"],
   "ignoreUrls": true,
-  "ignoreCapitalization": true,
+  "ignoreUppercase": true,
   "ignoreDigits": true,
   "maxRequests": 5
 }

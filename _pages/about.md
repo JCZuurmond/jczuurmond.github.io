@@ -23,9 +23,8 @@ engineer at heart.
   [GoDataDriven](https://godatadriven.com/){:target="_blank"}
 - give data {science,engineering} training at
   [GoDataDriven](https://godatadriven.com/){:target="_blank"}
-- am a [PyData Amsterdam](https://amsterdam.pydata.org/){:target="_blank"}
-  committee member. We organize
-  [Meetups](https://www.meetup.com/PyData-NL/){:target="_blank"} about Python
-  and data.
+- organize [Meetups](https://www.meetup.com/PyData-NL/){:target="_blank"} as
+  committee member of
+	[PyData Amsterdam](https://amsterdam.pydata.org/){:target="_blank"}
 - develop the open source data quality tool:
   [soda-spark](https://github.com/sodadata/soda-spark){:target="_blank"}

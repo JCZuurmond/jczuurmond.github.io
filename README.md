@@ -12,5 +12,3 @@ Use [rbenv](https://github.com/rbenv/rbenv) as Ruby environment manager. Then:
 $ gem install jekyll bundler
 $ bundle exec jekyll serve
 ```
-
-The PyData site is developed using [Jekyll](https://jekyllrb.com), a static site generator in Ruby. It's adivsable to use some kind of environment manager like `rbenv` before installing jekyll. After installing `gem install jekyll bundler`, you can run `bundle exec jekyll serve`
