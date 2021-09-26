@@ -33,7 +33,7 @@ data product is likely to show unexpected behavior.
 A common starting point is to add data tests to your data processing pipeline:
 
 ``` python
-assert (0 < = df["percentage_column"] <= 100).all()
+assert (0 <= df["percentage_column"] <= 100).all()
 ```
 
 This is good! It is a good start to add these checks. You will see that even the
