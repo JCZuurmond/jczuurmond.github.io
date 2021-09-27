@@ -87,7 +87,7 @@ cloud](https://cloud.soda.io/){:target="_blank"} allows you to detect these
 silent data issues by looking at the difference between  [data
 scans](https://docs.soda.io/soda/scan.html){:target="_blank"}.
 
-![anomaly detection](/assets/img/_posts/2021-09-27-soda-get-ahead-of-silent-data-issues/soda-anomaly-detection.png)
+![anomaly detection](/assets/img/posts/2021-09-27-soda-get-ahead-of-silent-data-issues/soda-anomaly-detection.png)
 
 They offer various features that support your data quality workflow. I will talk
 more about the data quality workflow in another blog post.
