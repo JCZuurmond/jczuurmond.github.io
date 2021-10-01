@@ -24,7 +24,9 @@
     "Ng",
     "Coursera",
     "deeplearning",
-    "ai"
+    "ai",
+    "dbt",
+    "Databricks"
   ],
   "ignoreText": [
     "header_img: /assets/img/*",
