@@ -17,7 +17,11 @@ The developer working on the downstream data model is getting frustrated because
 inexplicable behavior is appearing. When she recreates the data model without
 making a change to the definition the results is different! How is this possible?
 
-At some point she learns that you make changes to the upstream model - oops! Now, she at least knows why she saw this magical changes. But, you both want to continue with your development, you do not wait for the other to finish their work before continuing your work. This slows down the speed of your team. You want to work in parallel
+At some point she learns that you make changes to the upstream model - oops!
+Now, she at least knows why she saw this magical changes. But, you both want to
+continue with your development, you do not wait for the other to finish their
+work before continuing your work. This slows down the speed of your team. You
+want to work in parallel
 
 # User schemas
 
