@@ -1,5 +1,5 @@
 ---
-title: Using schema in the location of Spark external tables
+title: Developing data models together with dbt
 tags: [dbt, Spark]
 ---
 
