@@ -34,7 +34,8 @@ Spark external tables are tables stored outside of Spark's distributed file syst
 
 When creating an external table, the user specifies the location of the data, which is done by `dbt` automagically when creating a data model that materializes as a table and when the location root is defined:
 
-```SQL
+{% raw %}
+``` sql
 {% macro spark__location_clause() %}
   {%- set location_root = config.get('location_root', validator=validation.any[basestring]) -%}
   {%- set identifier = model['alias'] -%}
@@ -43,10 +44,12 @@ When creating an external table, the user specifies the location of the data, wh
   {%- endif %}
 {%- end macro -%}
 ```
+{% endraw %}
 
 When working with multiple developers, a problem arises. Even when using different schemas, as explained above, developers can change the data in each other's tables because they override the data in the underlying location. This can be avoided by adding the schema to the location root, like so:
 
-```SQL
+{% raw %}
+``` sql
 {% macro spark__location_clause() %}
   {%- set location_root = config.get('location_root', validator=validation.any[basestring]) -%}
   {%- set schema = model['schema'] -%}
@@ -56,6 +59,7 @@ When working with multiple developers, a problem arises. Even when using differe
   {%- endif %}
 {%- end macro -%}
 ```
+{% endraw %}
 
 **NOTE:** When applying this change, the location is not updated for **existing data models**. You must run a `--full-refresh` to ensure all data models' locations are changed.
 
