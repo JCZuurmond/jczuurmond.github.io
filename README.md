@@ -10,5 +10,6 @@ Use [rbenv](https://github.com/rbenv/rbenv) as Ruby environment manager. Then:
 
 ``` sh
 $ gem install jekyll bundler
+$ bundle install
 $ bundle exec jekyll serve
 ```
