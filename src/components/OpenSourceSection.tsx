@@ -41,16 +41,16 @@ const OpenSourceSection = () => {
   ];
 
   const dbtContributions = [
-    { name: "dbt-spark", desc: "dbt adapter for Apache Spark", url: "https://github.com/dbt-labs/dbt-spark" },
-    { name: "dbt-core", desc: "Core dbt framework contributions", url: "https://github.com/dbt-labs/dbt-core" },
-    { name: "dbt-external-tables", desc: "Macros for staging external sources", url: "https://github.com/dbt-labs/dbt-external-tables" },
-    { name: "spark-utils", desc: "Utility functions for dbt-spark", url: "https://github.com/dbt-labs/spark-utils" },
-    { name: "docs.getdbt.com", desc: "Documentation improvements", url: "https://github.com/dbt-labs/docs.getdbt.com" },
+    { title: "dbt-spark", description: "dbt adapter for Apache Spark", links: [{ label: "View Project", url: "https://github.com/dbt-labs/dbt-spark" }] },
+    { title: "dbt-core", description: "Core dbt framework contributions", links: [{ label: "View Project", url: "https://github.com/dbt-labs/dbt-core" }] },
+    { title: "dbt-external-tables", description: "Macros for staging external sources", links: [{ label: "View Project", url: "https://github.com/dbt-labs/dbt-external-tables" }] },
+    { title: "spark-utils", description: "Utility functions for dbt-spark", links: [{ label: "View Project", url: "https://github.com/dbt-labs/spark-utils" }] },
+    { title: "docs.getdbt.com", description: "Documentation improvements", links: [{ label: "View Project", url: "https://github.com/dbt-labs/docs.getdbt.com" }] },
   ];
 
   const dbtMicrosoftContributions = [
-    { name: "dbt-sqlserver", desc: "dbt adapter for SQL Server", url: "https://github.com/dbt-msft/dbt-sqlserver" },
-    { name: "dbt-synapse", desc: "dbt adapter for Azure Synapse", url: "https://github.com/dbt-msft/dbt-synapse" },
+    { title: "dbt-sqlserver", description: "dbt adapter for SQL Server", links: [{ label: "View Project", url: "https://github.com/dbt-msft/dbt-sqlserver" }] },
+    { title: "dbt-synapse", description: "dbt adapter for Azure Synapse", links: [{ label: "View Project", url: "https://github.com/dbt-msft/dbt-synapse" }] },
   ];
 
   const sodaProjects = [
@@ -64,8 +64,8 @@ const OpenSourceSection = () => {
   ];
 
   const sodaContributions = [
-    { name: "soda-core", emoji: "✨", desc: "Core framework contributions", url: "https://github.com/sodadata/soda-core" },
-    { name: "docs", emoji: "✨", desc: "Documentation enhancements", url: "https://github.com/sodadata/docs" },
+    { title: "soda-core", emoji: "✨", description: "Core framework contributions", links: [{ label: "View Project", url: "https://github.com/sodadata/soda-core" }] },
+    { title: "docs", emoji: "✨", description: "Documentation enhancements", links: [{ label: "View Project", url: "https://github.com/sodadata/docs" }] },
   ];
 
   const miscellaneousProjects = [
@@ -141,13 +141,13 @@ const OpenSourceSection = () => {
           <div className="grid md:grid-cols-2 gap-6">
             <ContributionsCard
               title="Microsoft Ecosystem"
-              contributions={dbtMicrosoftContributions}
+              items={dbtMicrosoftContributions}
               exploreLink={{ url: "https://github.com/dbt-msft", label: "Explore dbt Microsoft" }}
             />
 
             <ContributionsCard
               title="More Contributions"
-              contributions={dbtContributions}
+              items={dbtContributions}
               exploreLink={{ url: "https://github.com/dbt-labs", label: "Explore dbt Labs" }}
             />
           </div>
@@ -163,7 +163,7 @@ const OpenSourceSection = () => {
 
             <ContributionsCard
               title="More Contributions"
-              contributions={sodaContributions}
+              items={sodaContributions}
               exploreLink={{ url: "https://github.com/sodadata", label: "Explore Soda" }}
             />
           </div>
