@@ -67,7 +67,7 @@ const OpenSourceSection = () => {
     { name: "docs", emoji: "✨", desc: "Documentation enhancements", url: "https://github.com/sodadata/docs" },
   ];
 
-  const dataScienceProjects = [
+  const miscellaneousProjects = [
     {
       title: "scikit-lego",
       emoji: "✨",
@@ -241,7 +241,7 @@ const OpenSourceSection = () => {
         <div>
           <h3 className="text-xl font-semibold mb-6">Data Science & Beyond</h3>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {dataScienceProjects.map((project) => (
+            {miscellaneousProjects.map((project) => (
               <ProjectCard key={project.title} {...project} />
             ))}
           </div>
