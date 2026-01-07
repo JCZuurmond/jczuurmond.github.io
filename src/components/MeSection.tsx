@@ -7,7 +7,7 @@ const MeSection = () => {
       <div className="grid lg:grid-cols-2 gap-12 items-center">
         <div className="space-y-6">
           <p className="text-sm font-medium text-muted-foreground uppercase tracking-wider">
-            Field CTO • Data Engineering & AI
+            Field CTO • Data Engineering & Artificial Intelligence
           </p>
 
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground leading-tight">
