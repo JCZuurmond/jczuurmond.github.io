@@ -61,11 +61,13 @@ const OpenSourceSection = () => {
       tags: ["Python", "PySpark", "Data Quality"],
       links: [{ label: "View Project", url: "https://github.com/sodadata/soda-spark" }],
     },
-  ];
-
-  const sodaContributions = [
-    { title: "soda-core", emoji: "✨", description: "Core framework contributions", links: [{ label: "View Project", url: "https://github.com/sodadata/soda-core" }] },
-    { title: "docs", emoji: "✨", description: "Documentation enhancements", links: [{ label: "View Project", url: "https://github.com/sodadata/docs" }] },
+    {
+      title: "soda-core",
+      emoji: "✨",
+      description: "Core framework contributions",
+      tags: ["Python", "Data Quality"],
+      links: [{ label: "View Project", url: "https://github.com/sodadata/soda-core" }],
+    },
   ];
 
   const miscellaneousProjects = [
@@ -160,12 +162,6 @@ const OpenSourceSection = () => {
             {sodaProjects.map((project) => (
               <ProjectCard key={project.title} {...project} />
             ))}
-
-            <ContributionsCard
-              title="More Contributions"
-              items={sodaContributions}
-              exploreLink={{ url: "https://github.com/sodadata", label: "Explore Soda" }}
-            />
           </div>
         </div>
 
