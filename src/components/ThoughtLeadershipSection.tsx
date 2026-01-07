@@ -57,7 +57,7 @@ const ThoughtLeadershipSection = () => {
       title: "dbt's missing software engineering piece: unit tests",
       description: "Deep dive into testing practices for analytics code, making the case for unit testing in dbt projects. Explores how traditional software engineering principles enhance data transformation reliability and developer confidence.",
       tags: ["Data Engineering", "Testing"],
-      link: { label: "Read Article", url: "https://godatadriven.com/blog/dbts-missing-software-engineering-piece-unit-tests/" },
+      link: { label: "Read Article", url: "https://xebia.com/blog/dbts-missing-software-engineering-piece-unit-tests/" },
     },
     {
       type: "written",
