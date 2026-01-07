@@ -138,7 +138,7 @@ const OpenSourceSection = () => {
                 rel="noopener noreferrer"
                 className="link-style text-sm font-medium mt-4 inline-block"
               >
-                Explore dbt-msft →
+                Explore dbt Microsoft →
               </a>
             </div>
 
