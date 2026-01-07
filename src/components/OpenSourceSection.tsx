@@ -146,7 +146,7 @@ const OpenSourceSection = () => {
               <h4 className="text-lg font-semibold mb-4">
                 Microsoft Ecosystem <span className="golden-text">✨</span>
               </h4>
-              <ul className="space-y-2 mb-6">
+              <ul className="space-y-2">
                 {dbtMicrosoftContributions.map((item) => (
                   <li key={item.name} className="text-sm text-muted-foreground">
                     <a
@@ -160,6 +160,14 @@ const OpenSourceSection = () => {
                   </li>
                 ))}
               </ul>
+              <a
+                href="https://github.com/dbt-msft"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="link-style text-sm font-medium mt-4 inline-block"
+              >
+                Explore dbt-msft →
+              </a>
             </div>
           </div>
         </div>
