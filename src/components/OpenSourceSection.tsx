@@ -1,5 +1,6 @@
 import { Puzzle } from "lucide-react";
 import ProjectCard from "./ProjectCard";
+import ContributionsCard from "./ContributionsCard";
 
 const OpenSourceSection = () => {
   const databricksProjects = [
@@ -138,62 +139,17 @@ const OpenSourceSection = () => {
           
           {/* dbt Microsoft */}
           <div className="grid md:grid-cols-2 gap-6">
-            <div className="project-card">
-              <h4 className="text-lg font-semibold mb-4">
-                Microsoft Ecosystem <span className="golden-text">✨</span>
-              </h4>
-              <ul className="space-y-2">
-                {dbtMicrosoftContributions.map((item) => (
-                  <li key={item.name} className="text-sm text-muted-foreground">
-                    <a
-                      href={item.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="font-medium text-foreground hover:underline"
-                    >
-                      {item.name}
-                    </a> — {item.desc}
-                  </li>
-                ))}
-              </ul>
-              <a
-                href="https://github.com/dbt-msft"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="link-style text-sm font-medium mt-4 inline-block"
-              >
-                Explore dbt Microsoft →
-              </a>
-            </div>
+            <ContributionsCard
+              title="Microsoft Ecosystem"
+              contributions={dbtMicrosoftContributions}
+              exploreLink={{ url: "https://github.com/dbt-msft", label: "Explore dbt Microsoft" }}
+            />
 
-            {/* more dbt contributions */}
-            <div className="project-card">
-              <h4 className="text-lg font-semibold mb-4">
-                More Contributions <span className="golden-text">✨</span>
-              </h4>
-              <ul className="space-y-2">
-                {dbtContributions.map((item) => (
-                  <li key={item.name} className="text-sm text-muted-foreground">
-                    <a
-                      href={item.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="font-medium text-foreground hover:underline"
-                    >
-                      {item.name}
-                    </a> — {item.desc}
-                  </li>
-                ))}
-              </ul>
-              <a
-                href="https://github.com/dbt-labs"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="link-style text-sm font-medium mt-4 inline-block"
-              >
-                Explore dbt Labs →
-              </a>
-            </div>
+            <ContributionsCard
+              title="More Contributions"
+              contributions={dbtContributions}
+              exploreLink={{ url: "https://github.com/dbt-labs", label: "Explore dbt Labs" }}
+            />
           </div>
         </div>
 
@@ -205,35 +161,11 @@ const OpenSourceSection = () => {
               <ProjectCard key={project.title} {...project} />
             ))}
 
-            {/* more Soda contributions */}
-            <div className="project-card">
-              <h4 className="text-lg font-semibold mb-4">
-                More Contributions <span className="golden-text">✨</span>
-              </h4>
-              <ul className="space-y-2">
-                {sodaContributions.map((item) => (
-                  <li key={item.name} className="text-sm text-muted-foreground">
-                    <a
-                      href={item.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="font-medium text-foreground hover:underline"
-                    >
-                      {item.name}
-                    </a>{" "}
-                    <span className="golden-text">{item.emoji}</span> — {item.desc}
-                  </li>
-                ))}
-              </ul>
-              <a
-                href="https://github.com/sodadata"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="link-style text-sm font-medium mt-4 inline-block"
-              >
-                Explore Soda →
-              </a>
-            </div>
+            <ContributionsCard
+              title="More Contributions"
+              contributions={sodaContributions}
+              exploreLink={{ url: "https://github.com/sodadata", label: "Explore Soda" }}
+            />
           </div>
         </div>
 
