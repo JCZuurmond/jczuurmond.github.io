@@ -26,8 +26,8 @@ const OpenSourceSection = () => {
       description: "An April Fools' project that became a viral community favorite. A playful dbt adapter for Excel that captured hearts across the data community with 400+ GitHub stars.",
       tags: ["Python", "dbt", "Humor"],
       links: [
-        { label: "Try Demo", url: "https://dbt-excel.com/" },
-        { label: "GitHub", url: "https://github.com/godatadriven/dbt-excel" },
+        { label: "Demo", url: "https://dbt-excel.com/" },
+        { label: "View Project", url: "https://github.com/godatadriven/dbt-excel" },
       ],
     },
     {
