@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "postbuild": "node scripts/verify-links.js",
     "build:dev": "vite build --mode development",
+    "verify-links": "node scripts/verify-links.js",
     "lint": "eslint .",
     "preview": "vite preview"
   },
