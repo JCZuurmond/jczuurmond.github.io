@@ -9,10 +9,25 @@ interface ProjectCardProps {
 }
 
 const ProjectCard = ({ title, emoji, description, tags, links }: ProjectCardProps) => {
+  const firstLink = links[0]?.url;
+
   return (
     <div className="project-card h-full flex flex-col">
       <h3 className="text-xl font-semibold mb-3">
-        {title} {emoji && <span className="golden-text">{emoji}</span>}
+        {firstLink ? (
+          <a
+            href={firstLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:underline"
+          >
+            {title} {emoji && <span className="golden-text">{emoji}</span>}
+          </a>
+        ) : (
+          <>
+            {title} {emoji && <span className="golden-text">{emoji}</span>}
+          </>
+        )}
       </h3>
       
       <p className="text-muted-foreground text-sm leading-relaxed mb-4 flex-grow">
