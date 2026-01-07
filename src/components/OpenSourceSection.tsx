@@ -97,7 +97,7 @@ const OpenSourceSection = () => {
       emoji: "✨",
       description: "Emacs integration with OpenAI for enhanced productivity.",
       // tags: ["Emacs Lisp", "AI", "OpenAI"],
-      links: [{ label: "View Project", url: "https://github.com/JCZuurmond/emacs-openai" }],
+      links: [{ label: "View Project", url: "https://github.com/emacs-openai/openai" }],
     },
   ];
 
