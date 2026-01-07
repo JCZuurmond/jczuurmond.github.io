@@ -17,8 +17,17 @@ interface ContributionsCardProps {
 }
 
 const ContributionsCard = ({ title, titleEmoji = "✨", items, exploreLink }: ContributionsCardProps) => {
+  const handleCardClick = () => {
+    if (exploreLink) {
+      window.open(exploreLink.url, '_blank', 'noopener,noreferrer');
+    }
+  };
+
   return (
-    <div className="project-card">
+    <div
+      className={`project-card ${exploreLink ? 'cursor-pointer' : ''}`}
+      onClick={handleCardClick}
+    >
       <h4 className="text-lg font-semibold mb-4">
         {title} <span className="golden-text">{titleEmoji}</span>
       </h4>
@@ -30,6 +39,7 @@ const ContributionsCard = ({ title, titleEmoji = "✨", items, exploreLink }: Co
               target="_blank"
               rel="noopener noreferrer"
               className="font-medium text-foreground hover:underline"
+              onClick={(e) => e.stopPropagation()}
             >
               {item.title}
             </a>
@@ -43,6 +53,7 @@ const ContributionsCard = ({ title, titleEmoji = "✨", items, exploreLink }: Co
           target="_blank"
           rel="noopener noreferrer"
           className="link-style text-sm font-medium mt-4 inline-block"
+          onClick={(e) => e.stopPropagation()}
         >
           {exploreLink.label} →
         </a>

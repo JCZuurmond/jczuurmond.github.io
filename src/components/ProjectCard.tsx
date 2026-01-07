@@ -11,25 +11,21 @@ interface ProjectCardProps {
 const ProjectCard = ({ title, emoji, description, tags, links }: ProjectCardProps) => {
   const firstLink = links[0]?.url;
 
+  const handleCardClick = () => {
+    if (firstLink) {
+      window.open(firstLink, '_blank', 'noopener,noreferrer');
+    }
+  };
+
   return (
-    <div className="project-card h-full flex flex-col">
+    <div
+      className={`project-card h-full flex flex-col ${firstLink ? 'cursor-pointer' : ''}`}
+      onClick={handleCardClick}
+    >
       <h3 className="text-xl font-semibold mb-3">
-        {firstLink ? (
-          <a
-            href={firstLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:underline"
-          >
-            {title} {emoji && <span className="golden-text">{emoji}</span>}
-          </a>
-        ) : (
-          <>
-            {title} {emoji && <span className="golden-text">{emoji}</span>}
-          </>
-        )}
+        {title} {emoji && <span className="golden-text">{emoji}</span>}
       </h3>
-      
+
       <p className="text-muted-foreground text-sm leading-relaxed mb-4 flex-grow">
         {description}
       </p>
@@ -43,7 +39,7 @@ const ProjectCard = ({ title, emoji, description, tags, links }: ProjectCardProp
           ))}
         </div>
       )}
-      
+
       <div className="flex flex-wrap gap-3">
         {links.map((link) => (
           <a
@@ -52,6 +48,7 @@ const ProjectCard = ({ title, emoji, description, tags, links }: ProjectCardProp
             target="_blank"
             rel="noopener noreferrer"
             className="link-style text-sm font-medium inline-flex items-center gap-1 group"
+            onClick={(e) => e.stopPropagation()}
           >
             {link.label}
             <ArrowRight className="w-3 h-3 transition-transform group-hover:translate-x-0.5" />
