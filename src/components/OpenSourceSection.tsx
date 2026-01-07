@@ -39,7 +39,7 @@ const OpenSourceSection = () => {
     },
   ];
 
-  const contributions = [
+  const dbtContributions = [
     { name: "dbt-spark", desc: "dbt adapter for Apache Spark", url: "https://github.com/dbt-labs/dbt-spark" },
     { name: "spark-utils", desc: "Utility functions for dbt-spark", url: "https://github.com/dbt-labs/spark-utils" },
     { name: "dbt-core", desc: "Core dbt framework contributions", url: "https://github.com/dbt-labs/dbt-core" },
@@ -47,7 +47,7 @@ const OpenSourceSection = () => {
     { name: "docs.getdbt.com", desc: "Documentation improvements", url: "https://github.com/dbt-labs/docs.getdbt.com" },
   ];
 
-  const microsoftContributions = [
+  const dbtMicrosoftContributions = [
     { name: "dbt-sqlserver", desc: "dbt adapter for SQL Server", url: "https://github.com/dbt-msft/dbt-sqlserver" },
     { name: "dbt-synapse", desc: "dbt adapter for Azure Synapse", url: "https://github.com/dbt-msft/dbt-synapse" },
   ];
@@ -119,7 +119,7 @@ const OpenSourceSection = () => {
                 Core Contributions <span className="golden-text">✨</span>
               </h4>
               <ul className="space-y-2">
-                {contributions.map((item) => (
+                {dbtContributions.map((item) => (
                   <li key={item.name} className="text-sm text-muted-foreground">
                     <a
                       href={item.url}
@@ -147,7 +147,7 @@ const OpenSourceSection = () => {
                 Microsoft Ecosystem <span className="golden-text">✨</span>
               </h4>
               <ul className="space-y-2 mb-6">
-                {microsoftContributions.map((item) => (
+                {dbtMicrosoftContributions.map((item) => (
                   <li key={item.name} className="text-sm text-muted-foreground">
                     <a
                       href={item.url}
