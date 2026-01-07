@@ -217,12 +217,28 @@ async function main() {
   console.log('\n');
 
   // Report results
-  const broken = results.filter(r => !r.ok);
   const working = results.filter(r => r.ok);
+  const methodNotAllowed = results.filter(r => !r.ok && r.status === 405);
+  const broken = results.filter(r => !r.ok && r.status !== 405);
 
+  // Show warnings for 405 errors (Method Not Allowed)
+  if (methodNotAllowed.length > 0) {
+    console.log(`⚠️  Found ${methodNotAllowed.length} link(s) with 405 Method Not Allowed (warnings only):\n`);
+
+    for (const link of methodNotAllowed) {
+      console.log(`  • ${link.url}`);
+      console.log(`    Status: ${link.status}`);
+      console.log();
+    }
+  }
+
+  // Show actual broken links
   if (broken.length === 0) {
     console.log('✅ All links are working!\n');
     console.log(`Verified ${working.length} link(s) successfully`);
+    if (methodNotAllowed.length > 0) {
+      console.log(`⚠️  ${methodNotAllowed.length} link(s) returned 405 (Method Not Allowed) - these may still work in browsers`);
+    }
   } else {
     console.log(`❌ Found ${broken.length} broken link(s):\n`);
 
@@ -238,8 +254,11 @@ async function main() {
     }
 
     console.log(`✅ ${working.length} link(s) are working`);
+    if (methodNotAllowed.length > 0) {
+      console.log(`⚠️  ${methodNotAllowed.length} link(s) returned 405 (Method Not Allowed)`);
+    }
 
-    // Exit with error code if there are broken links
+    // Exit with error code only if there are actual broken links (excluding 405)
     process.exit(1);
   }
 }
