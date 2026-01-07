@@ -151,7 +151,9 @@ const OpenSourceSection = () => {
                   </li>
                 ))}
               </ul>
+            </div>
 
+            <div className="project-card">
               <h4 className="text-lg font-semibold mb-4">Data Quality (Soda)</h4>
               <ul className="space-y-2">
                 {sodaContributions.map((item) => (
