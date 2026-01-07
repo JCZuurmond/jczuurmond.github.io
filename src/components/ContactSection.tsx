@@ -9,9 +9,7 @@ const ContactSection = () => {
         </h2>
         <p className="text-muted-foreground max-w-2xl mx-auto text-lg mb-8">
           Open to collaborations on data engineering challenges, open source contributions, 
-          speaking opportunities, and conversations about the future of data platforms. 
-          Whether you're tackling Unity Catalog migrations, improving dbt workflows, 
-          or exploring AI-human collaboration, let's connect.
+          speaking opportunities, and conversations about the future of data & AI. 
         </p>
         
         <div className="flex justify-center gap-8">
