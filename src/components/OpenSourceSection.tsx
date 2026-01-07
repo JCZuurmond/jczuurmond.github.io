@@ -40,29 +40,29 @@ const OpenSourceSection = () => {
   ];
 
   const contributions = [
-    { name: "dbt-spark", desc: "dbt adapter for Apache Spark" },
-    { name: "spark-utils", desc: "Utility functions for dbt-spark" },
-    { name: "dbt-core", desc: "Core dbt framework contributions" },
-    { name: "dbt-external-tables", desc: "Macros for staging external sources" },
-    { name: "docs.getdbt.com", desc: "Documentation improvements" },
+    { name: "dbt-spark", desc: "dbt adapter for Apache Spark", url: "https://github.com/dbt-labs/dbt-spark" },
+    { name: "spark-utils", desc: "Utility functions for dbt-spark", url: "https://github.com/dbt-labs/spark-utils" },
+    { name: "dbt-core", desc: "Core dbt framework contributions", url: "https://github.com/dbt-labs/dbt-core" },
+    { name: "dbt-external-tables", desc: "Macros for staging external sources", url: "https://github.com/dbt-labs/dbt-external-tables" },
+    { name: "docs.getdbt.com", desc: "Documentation improvements", url: "https://github.com/dbt-labs/docs.getdbt.com" },
   ];
 
   const microsoftContributions = [
-    { name: "dbt-sqlserver", desc: "dbt adapter for SQL Server" },
-    { name: "dbt-synapse", desc: "dbt adapter for Azure Synapse" },
+    { name: "dbt-sqlserver", desc: "dbt adapter for SQL Server", url: "https://github.com/dbt-msft/dbt-sqlserver" },
+    { name: "dbt-synapse", desc: "dbt adapter for Azure Synapse", url: "https://github.com/dbt-msft/dbt-synapse" },
   ];
 
   const sodaContributions = [
-    { name: "soda-spark", emoji: "🚀", desc: "PySpark library for data quality testing" },
-    { name: "soda-core", emoji: "✨", desc: "Core framework contributions" },
-    { name: "docs", emoji: "✨", desc: "Documentation enhancements" },
+    { name: "soda-spark", emoji: "🚀", desc: "PySpark library for data quality testing", url: "https://github.com/sodadata/soda-spark" },
+    { name: "soda-core", emoji: "✨", desc: "Core framework contributions", url: "https://github.com/sodadata/soda-core" },
+    { name: "docs", emoji: "✨", desc: "Documentation enhancements", url: "https://github.com/sodadata/docs" },
   ];
 
   const dataScienceProjects = [
-    { name: "scikit-lego", emoji: "✨", desc: "Extra blocks for scikit-learn pipelines, extending ML capabilities with practical utilities." },
-    { name: "smelly-rats", emoji: "🚀", desc: "scikit-learn implementation of research on IPLS algorithms." },
-    { name: "pyjpeg", emoji: "🚀", desc: "Pure Python implementation of the JPEG compression algorithm." },
-    { name: "emacs-openai", emoji: "✨", desc: "Emacs integration with OpenAI for enhanced productivity." },
+    { name: "scikit-lego", emoji: "✨", desc: "Extra blocks for scikit-learn pipelines, extending ML capabilities with practical utilities.", url: "https://github.com/koaning/scikit-lego" },
+    { name: "smelly-rats", emoji: "🚀", desc: "scikit-learn implementation of research on IPLS algorithms.", url: "https://github.com/JCZuurmond/smelly-rats" },
+    { name: "pyjpeg", emoji: "🚀", desc: "Pure Python implementation of the JPEG compression algorithm.", url: "https://github.com/JCZuurmond/pyjpeg" },
+    { name: "emacs-openai", emoji: "✨", desc: "Emacs integration with OpenAI for enhanced productivity.", url: "https://github.com/JCZuurmond/emacs-openai" },
   ];
 
   return (
@@ -112,7 +112,14 @@ const OpenSourceSection = () => {
               <ul className="space-y-2">
                 {contributions.map((item) => (
                   <li key={item.name} className="text-sm text-muted-foreground">
-                    <span className="font-medium text-foreground">{item.name}</span> — {item.desc}
+                    <a
+                      href={item.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-medium text-foreground hover:underline"
+                    >
+                      {item.name}
+                    </a> — {item.desc}
                   </li>
                 ))}
               </ul>
@@ -133,7 +140,14 @@ const OpenSourceSection = () => {
               <ul className="space-y-2 mb-6">
                 {microsoftContributions.map((item) => (
                   <li key={item.name} className="text-sm text-muted-foreground">
-                    <span className="font-medium text-foreground">{item.name}</span> — {item.desc}
+                    <a
+                      href={item.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-medium text-foreground hover:underline"
+                    >
+                      {item.name}
+                    </a> — {item.desc}
                   </li>
                 ))}
               </ul>
@@ -142,7 +156,14 @@ const OpenSourceSection = () => {
               <ul className="space-y-2">
                 {sodaContributions.map((item) => (
                   <li key={item.name} className="text-sm text-muted-foreground">
-                    <span className="font-medium text-foreground">{item.name}</span>{" "}
+                    <a
+                      href={item.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-medium text-foreground hover:underline"
+                    >
+                      {item.name}
+                    </a>{" "}
                     <span className="golden-text">{item.emoji}</span> — {item.desc}
                   </li>
                 ))}
@@ -166,7 +187,15 @@ const OpenSourceSection = () => {
             {dataScienceProjects.map((project) => (
               <div key={project.name} className="project-card">
                 <h4 className="font-semibold mb-2">
-                  {project.name} <span className="golden-text">{project.emoji}</span>
+                  <a
+                    href={project.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:underline"
+                  >
+                    {project.name}
+                  </a>{" "}
+                  <span className="golden-text">{project.emoji}</span>
                 </h4>
                 <p className="text-sm text-muted-foreground">{project.desc}</p>
               </div>
