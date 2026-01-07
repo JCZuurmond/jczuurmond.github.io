@@ -52,8 +52,17 @@ const OpenSourceSection = () => {
     { name: "dbt-synapse", desc: "dbt adapter for Azure Synapse", url: "https://github.com/dbt-msft/dbt-synapse" },
   ];
 
-  const sodaContributions = [
-    { name: "soda-spark", emoji: "🚀", desc: "PySpark library for data quality testing", url: "https://github.com/sodadata/soda-spark" },
+  const sodaProjects = [
+    {
+      title: "soda-spark",
+      emoji: "🚀",
+      description: "PySpark library for data quality testing. Enables comprehensive data validation and quality checks directly within Spark workflows.",
+      tags: ["Python", "PySpark", "Data Quality"],
+      links: [{ label: "View Project", url: "https://github.com/sodadata/soda-spark" }],
+    },
+  ];
+
+  const sodaCoreContributions = [
     { name: "soda-core", emoji: "✨", desc: "Core framework contributions", url: "https://github.com/sodadata/soda-core" },
     { name: "docs", emoji: "✨", desc: "Documentation enhancements", url: "https://github.com/sodadata/docs" },
   ];
@@ -152,11 +161,23 @@ const OpenSourceSection = () => {
                 ))}
               </ul>
             </div>
+          </div>
+        </div>
+
+        {/* Soda (Data Quality) */}
+        <div className="mb-12">
+          <h3 className="text-xl font-semibold mb-6">Soda (Data Quality)</h3>
+          <div className="grid md:grid-cols-2 gap-6">
+            {sodaProjects.map((project) => (
+              <ProjectCard key={project.title} {...project} />
+            ))}
 
             <div className="project-card">
-              <h4 className="text-lg font-semibold mb-4">Data Quality (Soda)</h4>
+              <h4 className="text-lg font-semibold mb-4">
+                Core Contributions <span className="golden-text">✨</span>
+              </h4>
               <ul className="space-y-2">
-                {sodaContributions.map((item) => (
+                {sodaCoreContributions.map((item) => (
                   <li key={item.name} className="text-sm text-muted-foreground">
                     <a
                       href={item.url}
