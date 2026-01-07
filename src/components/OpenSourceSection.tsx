@@ -95,7 +95,7 @@ const OpenSourceSection = () => {
 
         {/* Databricks Labs */}
         <div className="mb-12">
-          <h3 className="text-xl font-semibold mb-6">Databricks Labs</h3>
+          <h3 className="text-xl font-semibold mb-6">Databricks Labs - Databricks Utilities </h3>
           <div className="grid md:grid-cols-2 gap-6">
             {databricksProjects.map((project) => (
               <ProjectCard key={project.title} {...project} />
@@ -103,9 +103,9 @@ const OpenSourceSection = () => {
           </div>
         </div>
 
-        {/* dbt Ecosystem */}
+        {/* dbt */}
         <div className="mb-12">
-          <h3 className="text-xl font-semibold mb-6">dbt Ecosystem</h3>
+          <h3 className="text-xl font-semibold mb-6">dbt - Data Transformations </h3>
           <div className="grid md:grid-cols-2 gap-6 mb-6">
             {dbtProjects.map((project) => (
               <ProjectCard key={project.title} {...project} />
@@ -174,7 +174,7 @@ const OpenSourceSection = () => {
 
         {/* Soda (Data Quality) */}
         <div className="mb-12">
-          <h3 className="text-xl font-semibold mb-6">Soda (Data Quality)</h3>
+          <h3 className="text-xl font-semibold mb-6">Soda - Data Quality</h3>
           <div className="grid md:grid-cols-2 gap-6">
             {sodaProjects.map((project) => (
               <ProjectCard key={project.title} {...project} />
