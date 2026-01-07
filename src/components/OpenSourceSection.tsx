@@ -68,10 +68,34 @@ const OpenSourceSection = () => {
   ];
 
   const dataScienceProjects = [
-    { name: "scikit-lego", emoji: "✨", desc: "Extra blocks for scikit-learn pipelines, extending ML capabilities with practical utilities.", url: "https://github.com/koaning/scikit-lego" },
-    { name: "smelly-rats", emoji: "🚀", desc: "scikit-learn implementation of research on IPLS algorithms.", url: "https://github.com/JCZuurmond/smelly-rats" },
-    { name: "pyjpeg", emoji: "🚀", desc: "Pure Python implementation of the JPEG compression algorithm.", url: "https://github.com/JCZuurmond/pyjpeg" },
-    { name: "emacs-openai", emoji: "✨", desc: "Emacs integration with OpenAI for enhanced productivity.", url: "https://github.com/JCZuurmond/emacs-openai" },
+    {
+      title: "scikit-lego",
+      emoji: "✨",
+      description: "Extra blocks for scikit-learn pipelines, extending ML capabilities with practical utilities.",
+      // tags: ["Python", "Machine Learning", "scikit-learn"],
+      links: [{ label: "View Project", url: "https://github.com/koaning/scikit-lego" }],
+    },
+    {
+      title: "smelly-rats",
+      emoji: "🚀",
+      description: "scikit-learn implementation of research on IPLS algorithms.",
+      // tags: ["Python", "Machine Learning", "Research"],
+      links: [{ label: "View Project", url: "https://github.com/JCZuurmond/smelly-rats" }],
+    },
+    {
+      title: "pyjpeg",
+      emoji: "🚀",
+      description: "Pure Python implementation of the JPEG compression algorithm.",
+      // tags: ["Python", "Image Processing"],
+      links: [{ label: "View Project", url: "https://github.com/JCZuurmond/pyjpeg" }],
+    },
+    {
+      title: "emacs-openai",
+      emoji: "✨",
+      description: "Emacs integration with OpenAI for enhanced productivity.",
+      // tags: ["Emacs Lisp", "AI", "OpenAI"],
+      links: [{ label: "View Project", url: "https://github.com/JCZuurmond/emacs-openai" }],
+    },
   ];
 
   return (
@@ -218,20 +242,7 @@ const OpenSourceSection = () => {
           <h3 className="text-xl font-semibold mb-6">Data Science & Beyond</h3>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {dataScienceProjects.map((project) => (
-              <div key={project.name} className="project-card">
-                <h4 className="font-semibold mb-2">
-                  <a
-                    href={project.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:underline"
-                  >
-                    {project.name}
-                  </a>{" "}
-                  <span className="golden-text">{project.emoji}</span>
-                </h4>
-                <p className="text-sm text-muted-foreground">{project.desc}</p>
-              </div>
+              <ProjectCard key={project.title} {...project} />
             ))}
           </div>
         </div>

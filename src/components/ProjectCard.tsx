@@ -4,7 +4,7 @@ interface ProjectCardProps {
   title: string;
   emoji?: string;
   description: string;
-  tags: string[];
+  tags?: string[];
   links: { label: string; url: string }[];
 }
 
@@ -33,14 +33,16 @@ const ProjectCard = ({ title, emoji, description, tags, links }: ProjectCardProp
       <p className="text-muted-foreground text-sm leading-relaxed mb-4 flex-grow">
         {description}
       </p>
-      
-      <div className="flex flex-wrap gap-2 mb-4">
-        {tags.map((tag) => (
-          <span key={tag} className="tag">
-            {tag}
-          </span>
-        ))}
-      </div>
+
+      {tags && tags.length > 0 && (
+        <div className="flex flex-wrap gap-2 mb-4">
+          {tags.map((tag) => (
+            <span key={tag} className="tag">
+              {tag}
+            </span>
+          ))}
+        </div>
+      )}
       
       <div className="flex flex-wrap gap-3">
         {links.map((link) => (
