@@ -53,6 +53,26 @@ const OpenSourceSection = () => {
     { title: "dbt-synapse", description: "dbt adapter for Azure Synapse", links: [{ label: "View Project", url: "https://github.com/dbt-msft/dbt-synapse" }] },
   ];
 
+  const proteinGymProjects = [
+    {
+      title: "proteingym-base",
+      emoji: "✨",
+      description: "Infrastructure for standardizing protein datasets with formal schemas, data classes, and dataset management tools. Replaces undocumented spreadsheets with reproducible frameworks for protein variant effect prediction.",
+      tags: ["Python", "Bioinformatics", "Data Management"],
+      links: [{ label: "View Project", url: "https://github.com/ProteinGym/proteingym-base" }],
+    },
+    {
+      title: "proteingym-benchmark",
+      emoji: "✨",
+      description: "Benchmarking platform for protein variant effect prediction models. Features automated pipelines with DVC, web interface for model comparison, and standardized evaluation frameworks.",
+      tags: ["Python", "dvc", "ML Benchmarking"],
+      links: [
+        { label: "View Site", url: "https://proteingym.github.io/proteingym-benchmark/" },
+        { label: "View Project", url: "https://github.com/ProteinGym/proteingym-benchmark" },
+      ],
+    },
+  ];
+
   const sodaProjects = [
     {
       title: "soda-spark",
@@ -152,6 +172,16 @@ const OpenSourceSection = () => {
               items={dbtContributions}
               exploreLink={{ url: "https://github.com/dbt-labs", label: "Explore dbt Labs" }}
             />
+          </div>
+        </div>
+
+        {/* ProteinGym */}
+        <div className="mb-12">
+          <h3 className="text-xl font-semibold mb-6">ProteinGym - Protein Engineering</h3>
+          <div className="grid md:grid-cols-2 gap-6">
+            {proteinGymProjects.map((project) => (
+              <ProjectCard key={project.title} {...project} />
+            ))}
           </div>
         </div>
 
