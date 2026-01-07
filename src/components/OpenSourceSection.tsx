@@ -74,12 +74,13 @@ const OpenSourceSection = () => {
             Open Source
           </span>
           <h2 className="text-3xl md:text-4xl font-semibold mb-4">
-            Building Tools That Matter
+            Building Tools That Solve Real Problems
           </h2>
           <p className="text-muted-foreground max-w-2xl text-lg">
-            Active contributor and creator across the data engineering ecosystem, from enterprise 
-            migration tools to community-loved projects. Focused on making complex data systems 
-            more accessible and reliable.
+            Active creator 🚀 and contributor ✨ across the data engineering
+            ecosystem, from enterprise migration tools to community-loved
+            projects. Focused on making complex data systems more accessible and
+            reliable.
           </p>
         </div>
 
