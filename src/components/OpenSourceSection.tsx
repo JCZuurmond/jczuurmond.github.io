@@ -41,9 +41,9 @@ const OpenSourceSection = () => {
 
   const dbtContributions = [
     { name: "dbt-spark", desc: "dbt adapter for Apache Spark", url: "https://github.com/dbt-labs/dbt-spark" },
-    { name: "spark-utils", desc: "Utility functions for dbt-spark", url: "https://github.com/dbt-labs/spark-utils" },
     { name: "dbt-core", desc: "Core dbt framework contributions", url: "https://github.com/dbt-labs/dbt-core" },
     { name: "dbt-external-tables", desc: "Macros for staging external sources", url: "https://github.com/dbt-labs/dbt-external-tables" },
+    { name: "spark-utils", desc: "Utility functions for dbt-spark", url: "https://github.com/dbt-labs/spark-utils" },
     { name: "docs.getdbt.com", desc: "Documentation improvements", url: "https://github.com/dbt-labs/docs.getdbt.com" },
   ];
 
