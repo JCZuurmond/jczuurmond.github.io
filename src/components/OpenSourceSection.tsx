@@ -23,7 +23,7 @@ const OpenSourceSection = () => {
     {
       title: "dbt-excel",
       emoji: "🚀",
-      description: "An April Fools' project that became a viral community favorite. A playful dbt adapter for Excel that captured hearts across the data community with 400+ GitHub stars.",
+      description: "An April Fools' project that became a viral community favorite. A playful dbt adapter for Excel that captured hearts across the data community.",
       tags: ["Python", "dbt", "Humor"],
       links: [
         { label: "Demo", url: "https://dbt-excel.com/" },
