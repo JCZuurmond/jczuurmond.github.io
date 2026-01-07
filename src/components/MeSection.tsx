@@ -41,7 +41,7 @@ const MeSection = () => {
         <div className="relative">
           <div className="aspect-square rounded-2xl bg-gradient-to-br from-muted to-secondary overflow-hidden shadow-xl">
             <img
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=600&fit=crop&crop=face"
+              src="/me.png"
               alt="Cor Zuurmond"
               className="w-full h-full object-cover opacity-90"
             />
