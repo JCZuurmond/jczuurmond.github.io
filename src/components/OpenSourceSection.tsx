@@ -62,7 +62,7 @@ const OpenSourceSection = () => {
     },
   ];
 
-  const sodaCoreContributions = [
+  const sodaContributions = [
     { name: "soda-core", emoji: "✨", desc: "Core framework contributions", url: "https://github.com/sodadata/soda-core" },
     { name: "docs", emoji: "✨", desc: "Documentation enhancements", url: "https://github.com/sodadata/docs" },
   ];
@@ -112,7 +112,7 @@ const OpenSourceSection = () => {
             ))}
           </div>
           
-          {/* Core Contributions */}
+          {/* dbt Microsoft */}
           <div className="grid md:grid-cols-2 gap-6">
             <div className="project-card">
               <h4 className="text-lg font-semibold mb-4">
@@ -142,9 +142,10 @@ const OpenSourceSection = () => {
               </a>
             </div>
 
+            {/* more dbt contributions */}
             <div className="project-card">
               <h4 className="text-lg font-semibold mb-4">
-                Core Contributions <span className="golden-text">✨</span>
+                More Contributions <span className="golden-text">✨</span>
               </h4>
               <ul className="space-y-2">
                 {dbtContributions.map((item) => (
@@ -180,12 +181,13 @@ const OpenSourceSection = () => {
               <ProjectCard key={project.title} {...project} />
             ))}
 
+            {/* more Soda contributions */}
             <div className="project-card">
               <h4 className="text-lg font-semibold mb-4">
-                Core Contributions <span className="golden-text">✨</span>
+                More Contributions <span className="golden-text">✨</span>
               </h4>
               <ul className="space-y-2">
-                {sodaCoreContributions.map((item) => (
+                {sodaContributions.map((item) => (
                   <li key={item.name} className="text-sm text-muted-foreground">
                     <a
                       href={item.url}
