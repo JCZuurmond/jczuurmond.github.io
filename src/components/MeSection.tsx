@@ -15,9 +15,10 @@ const MeSection = () => {
           </h1>
 
           <p className="text-lg text-muted-foreground leading-relaxed max-w-xl">
-            Bringing clarity to complex data challenges through open source innovation
-            and human-centered technical leadership. Field CTO at Xebia, bridging
-            enterprise data strategy with hands-on engineering excellence.
+            Bringing clarity to complex data challenges through engineering
+            innovation and human-centered technical leadership. Cor is a field
+            CTO at Xebia, bridging enterprise data strategy with hands-on
+            engineering excellence.
           </p>
 
           <div className="flex flex-wrap gap-4 pt-2">
