@@ -116,34 +116,6 @@ const OpenSourceSection = () => {
           <div className="grid md:grid-cols-2 gap-6">
             <div className="project-card">
               <h4 className="text-lg font-semibold mb-4">
-                Core Contributions <span className="golden-text">✨</span>
-              </h4>
-              <ul className="space-y-2">
-                {dbtContributions.map((item) => (
-                  <li key={item.name} className="text-sm text-muted-foreground">
-                    <a
-                      href={item.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="font-medium text-foreground hover:underline"
-                    >
-                      {item.name}
-                    </a> — {item.desc}
-                  </li>
-                ))}
-              </ul>
-              <a
-                href="https://github.com/dbt-labs"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="link-style text-sm font-medium mt-4 inline-block"
-              >
-                Explore dbt Labs →
-              </a>
-            </div>
-
-            <div className="project-card">
-              <h4 className="text-lg font-semibold mb-4">
                 Microsoft Ecosystem <span className="golden-text">✨</span>
               </h4>
               <ul className="space-y-2">
@@ -167,6 +139,34 @@ const OpenSourceSection = () => {
                 className="link-style text-sm font-medium mt-4 inline-block"
               >
                 Explore dbt-msft →
+              </a>
+            </div>
+
+            <div className="project-card">
+              <h4 className="text-lg font-semibold mb-4">
+                Core Contributions <span className="golden-text">✨</span>
+              </h4>
+              <ul className="space-y-2">
+                {dbtContributions.map((item) => (
+                  <li key={item.name} className="text-sm text-muted-foreground">
+                    <a
+                      href={item.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-medium text-foreground hover:underline"
+                    >
+                      {item.name}
+                    </a> — {item.desc}
+                  </li>
+                ))}
+              </ul>
+              <a
+                href="https://github.com/dbt-labs"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="link-style text-sm font-medium mt-4 inline-block"
+              >
+                Explore dbt Labs →
               </a>
             </div>
           </div>
